@@ -106,3 +106,31 @@ function carregarScriptMiliwatts(){
 
     document.body.appendChild(script)
 }
+
+
+const formulaDecibeis = document.getElementById('formulaConvertdBm')
+formulaDecibeis.addEventListener('click', () => {
+    const conteudo = document.querySelector('.formula')
+    conteudo.innerHTML=''
+    fetch('forms/decibeis.html')
+        .then(response => response.text())
+        .then(data => {
+            conteudo.innerHTML = data
+            carregarScriptDecibeis()
+        })
+        .catch(error => {
+            console.error('Ocorreu um erro ao carregar o arquivo HTML:', error)
+        })
+})
+
+function carregarScriptDecibeis(){
+    const script = document.createElement('script')
+    script.src = 'calculadora/decibeis.js'
+    script.async = true
+
+    script.onload = function () {
+
+    }
+
+    document.body.appendChild(script)
+}
