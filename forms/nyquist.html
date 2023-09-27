@@ -1,0 +1,12 @@
+
+<div class="container">
+    <h2>Calculadora de Nyquist - Taxa de Nyquist</h2>
+    <label for="larguraDeBanda">Largura de banda do sinal (Hz):</label>
+    <input type="number" id="larguraDeBanda" placeholder="Digite a largura de banda" required>
+    
+    <label for="modulacao">Mododulação multinível (dbi):</label>
+    <input type="number" id="modulacao" placeholder="Digite a mododulação multinível" required>
+
+    <button onclick="calcularNyquist()">Calcular Taxa</button>
+    <p>Taxa de Nyquist: <span id="resultado"></span> bps</p>
+</div>
