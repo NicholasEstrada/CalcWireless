@@ -1,9 +1,30 @@
 <div class="container">
     <h2>Shannon - Capacidade Máxima de Canal</h2>
-    <label for="larguraDeBanda">Largura de Banda (Hz):</label>
+    <label for="larguraDeBanda">Largura de Banda:</label>
+
+    <div class="inputSelect">
+
     <input type="number" id="larguraDeBanda">
+
+    <select name="grandezaHz" id="grandezaHz">
+        <option value="1">Hz</option>
+        <option value="1000">KHz</option>
+        <option value="1000000">MHz</option>
+        <option value="1000000000">GHz</option>
+    </select>
+
+    </div>
+
     <label for="sinalRuido">Relação Sinal-Ruído (dB):</label>
+
+    <div class="inputSelect">
     <input type="number" id="sinalRuido">
+
+    <select name="grandezaHz" id="grandezaHz" disabled>
+        <option value="hz">dB </option>
+    </select>
+</div>
+
     <button onclick="calcularShannon()">Calcular</button>
-    <p>Capacidade Máxima de Canal: <span id="resultadoShannon"></span> bps</p>
+    <p>Capacidade Máxima de Canal: <span id="resultadoShannon"></span></p>
 </div>

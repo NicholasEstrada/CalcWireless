@@ -2,7 +2,10 @@ function calcularNyquist() {
     const larguraDeBandaInput = document.getElementById('larguraDeBanda')
     const modulacaoInput = document.getElementById('modulacao')
 
-    const larguraDeBanda = parseFloat(larguraDeBandaInput.value)
+    const grandeza = parseInt(document.getElementById('grandezaHz').value)
+    let larguraDeBanda = parseFloat(larguraDeBandaInput.value)
+    larguraDeBanda = larguraDeBanda*grandeza
+
     const modulacao = parseFloat(modulacaoInput.value)
 
     const taxa = 2 * larguraDeBanda * modulacao

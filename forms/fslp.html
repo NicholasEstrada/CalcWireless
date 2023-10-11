@@ -1,0 +1,29 @@
+
+<div class="container">
+    <h2>FSLP (Free Space Loss Path)</h2>
+
+    <label for="larguraDeBanda">Frequencia do sinal:</label>
+
+    <div class="inputSelect">
+    <input type="number" id="larguraDeBanda" placeholder="Digite a largura de banda" required>
+    <select name="grandezaHz" id="grandezaHz">
+        <option value="Hz">Hz</option>
+        <option value="KHz">KHz</option>
+        <option value="MHz">MHz</option>
+        <option value="GHz">GHz</option>
+    </select>
+    </div>
+
+
+    <label for="modulacao">Distância da transmissão:</label>
+    <div class="inputSelect">
+    <input type="number" id="distancia" placeholder="Digite a mododulação multinível" required>
+    <select name="grandezaDistancia" id="grandezaDistancia" >
+        <option value="1000">m</option>
+        <option value="1">Km</option>
+    </select>
+    </div>
+
+    <button onclick="calcularFSLP()">Calcular Taxa</button>
+    <p>FSLP: <span id="resultado"></span></p>
+</div>

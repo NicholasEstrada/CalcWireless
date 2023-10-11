@@ -134,3 +134,57 @@ function carregarScriptDecibeis(){
 
     document.body.appendChild(script)
 }
+
+const formulaEIRP = document.getElementById('formulaEIRP')
+formulaEIRP.addEventListener('click', () => {
+    const conteudo = document.querySelector('.formula')
+    conteudo.innerHTML=''
+    fetch('forms/eirp.html')
+        .then(response => response.text())
+        .then(data => {
+            conteudo.innerHTML = data
+            carregarScriptEirp()
+        })
+        .catch(error => {
+            console.error('Ocorreu um erro ao carregar o arquivo HTML:', error)
+        })
+})
+
+function carregarScriptEirp(){
+    const script = document.createElement('script')
+    script.src = 'calculadora/eirp.js'
+    script.async = true
+
+    script.onload = function () {
+
+    }
+
+    document.body.appendChild(script)
+}
+
+const formulaFSLP = document.getElementById('formulaFSLP')
+formulaFSLP.addEventListener('click', () => {
+    const conteudo = document.querySelector('.formula')
+    conteudo.innerHTML=''
+    fetch('forms/fslp.html')
+        .then(response => response.text())
+        .then(data => {
+            conteudo.innerHTML = data
+            carregarScriptFslp()
+        })
+        .catch(error => {
+            console.error('Ocorreu um erro ao carregar o arquivo HTML:', error)
+        })
+})
+
+function carregarScriptFslp(){
+    const script = document.createElement('script')
+    script.src = 'calculadora/fslp.js'
+    script.async = true
+
+    script.onload = function () {
+
+    }
+
+    document.body.appendChild(script)
+}

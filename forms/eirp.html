@@ -1,0 +1,32 @@
+
+<div class="container">
+    <h2>EIRP (Effective Isotropic Radiated Power)</h2>
+    <label for="potencia">Potência de Transmissão::</label>
+    <div class="inputSelect">
+    <input type="number" id="potencia" placeholder="Digite a potência" required>
+    <select name="distanciaAntena" id="distanciaAntena" disabled>
+        <option value="1">dBm</option>
+    </select>
+    </div>
+    
+    
+    <label for="ganhoAntena">Ganho da Antena:</label>
+    <div class="inputSelect">
+    <input type="number" id="ganhoAntena" placeholder="Digite o valor ganho antenas" required>
+    <select name="ValorGanho" id="ValorGanho" disabled>
+        <option value="1">dBi</option>
+    </select>
+    </div>
+
+
+    <label for="perdaCabos">Perdas no Cabo:</label>
+    <div class="inputSelect">
+    <input type="number" id="perdaCabos" placeholder="Digite o valor de perdas" required>
+    <select name="ValorperdaCabos" id="ValorperdaCabos" disabled>
+        <option value="1">dB</option>
+    </select>
+    </div>
+
+    <button onclick="calcularEirp()">Calcular EIRP </button>
+    <p>EIRP: <span id="resultado"></span></p>
+</div>

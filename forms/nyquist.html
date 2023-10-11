@@ -1,11 +1,26 @@
 
 <div class="container">
     <h2>Calculadora de Nyquist - Taxa de Nyquist</h2>
-    <label for="larguraDeBanda">Largura de banda do sinal (Hz):</label>
+    <label for="larguraDeBanda">Largura de banda do sinal:</label>
+
+    <div class="inputSelect">
     <input type="number" id="larguraDeBanda" placeholder="Digite a largura de banda" required>
-    
+    <select name="grandezaHz" id="grandezaHz">
+        <option value="1">Hz</option>
+        <option value="1000">KHz</option>
+        <option value="1000000">MHz</option>
+        <option value="1000000000">GHz</option>
+    </select>
+    </div>
+
+
     <label for="modulacao">Mododulação multinível (dbi):</label>
+    <div class="inputSelect">
     <input type="number" id="modulacao" placeholder="Digite a mododulação multinível" required>
+    <select name="grandezaHz" id="grandezaHz" disabled>
+        <option value="1">dBi</option>
+    </select>
+    </div>
 
     <button onclick="calcularNyquist()">Calcular Taxa</button>
     <p>Taxa de Nyquist: <span id="resultado"></span> bps</p>

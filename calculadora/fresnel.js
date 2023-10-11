@@ -16,9 +16,17 @@ inputChannel.addEventListener('input', function () {
 });
 
 function calcularClearance() {
-    const distancia = parseFloat(document.getElementById('distancia').value)/1000;
-    const frequencia = parseFloat(document.getElementById('frequencia').value);
-    const objeto = parseFloat(document.getElementById('objeto').value)/1000;
+    const grandezaDitancia = parseInt(document.getElementById('distanciaAntena').value);
+    let distancia = parseFloat(document.getElementById('distancia').value)/1000;
+    distancia = distancia*grandezaDitancia;
+
+    const grandezaFrequencia = parseInt(document.getElementById('grandezaHz').value);
+    let frequencia = parseFloat(document.getElementById('frequencia').value);
+    frequencia = frequencia*grandezaFrequencia;
+
+    const grandezaObjeto = parseInt(document.getElementById('distanciaObj').value);
+    let objeto = parseFloat(document.getElementById('objeto').value)/1000;
+    objeto = objeto*grandezaObjeto;
 
     if (!isNaN(distancia) && !isNaN(frequencia) && !isNaN(objeto)) {
 

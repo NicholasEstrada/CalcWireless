@@ -2,16 +2,39 @@
 <div class="container">
     <h2>Calculadora de Clearance de Fresnel</h2>
     <label for="distancia">Distância entre Antenas (m):</label>
+    <div class="inputSelect">
     <input type="number" id="distancia" placeholder="Digite a distância" required>
-    <label for="frequencia">Frequência (MHz):</label>
-
-    <label for="inputChannel">Canal</label>
+    <select name="distanciaAntena" id="distanciaAntena">
+        <option value="1">m</option>
+        <option value="1000">Km</option>
+    </select>
+    </div>
+    
+    
+    <label for="frequencia">Frequência:</label>
+    <label for="inputChannel">Canal Faixa 2GHz</label>
     <input type="number" name="inputChannel" id="inputChannel" value="1">&larr; altere o canal aqui 
     ou insira um valor
-
+    <div class="inputSelect">
     <input type="number" id="frequencia" placeholder="Digite a frequência" required>
+    <select name="grandezaHz" id="grandezaHz">
+        <option value="1">Hz</option>
+        <option value="1000">KHz</option>
+        <option value="1000000">MHz</option>
+        <option value="1000000000">GHz</option>
+    </select>
+    </div>
+
+
     <label for="objeto">Distancia do objeto (m):</label>
+    <div class="inputSelect">
     <input type="number" id="objeto" placeholder="Digite a distancia do objeto" required>
+    <select name="distanciaObj" id="distanciaObj">
+        <option value="1">m</option>
+        <option value="1000">Km</option>
+    </select>
+    </div>
+
     <button onclick="calcularClearance()">Calcular Clearance</button>
     <p>Clearance de Fresnel: <span id="resultado"></span> metros</p>
 </div>

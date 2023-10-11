@@ -1,8 +1,12 @@
 <div class="container">
     <h2>Conversão de mW para dBm</h2>
     <label for="potencia">Potência (mW):</label>
+    <div class="inputSelect">
     <input type="number" id="potencia">
-    
+    <select name="mW" id="mW" disabled>
+        <option value="1">mW</option>
+    </select>
+    </div>
     <button onclick="calcularConversaoMw()">Calcular</button>
     <p>Potência: <span id="resultado"></span> dBm</p>
 </div>

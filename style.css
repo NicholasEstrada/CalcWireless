@@ -16,7 +16,7 @@ input[type="number"] {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
 }
 button {
     background-color: #007bff;
@@ -30,25 +30,47 @@ button {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 2;
+  padding: 0;
   overflow: hidden;
+  background-color: #333;
 }
 
 li {
-    margin: 2px;
   float: left;
 }
 
 li a {
   display: block;
-  padding: 8px;
-  background-color: #dddddd;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }
 
 #inputChannel{
-  width: 9%;
+    width: 9%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
+}
+
+.inputSelect{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inputSelect > select{
+  margin: 0px;
+  border-radius: 0px 5px 5px 0px;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+
+.formula{
+  margin-top: 10px;
 }
