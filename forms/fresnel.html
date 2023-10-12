@@ -12,9 +12,10 @@
     
     
     <label for="frequencia">Frequência:</label>
-    <label for="inputChannel">Canal Faixa 2GHz</label>
-    <input type="number" name="inputChannel" id="inputChannel" value="1">&larr; altere o canal aqui 
-    ou insira um valor
+    <label for="inputChannel"></label>
+    <input type="number" name="inputChannel" id="inputChannel" value="1" name="numero" min="1" max="13" oninput="validarNumero(this)"> &larr; <em> altere o canal da faixa aqui 
+    ou insira um valor </em>
+    <span id="mensagemErro" style="color: red;"></span>
     <div class="inputSelect">
     <input type="number" id="frequencia" placeholder="Digite a frequência" required>
     <select name="grandezaHz" id="grandezaHz">

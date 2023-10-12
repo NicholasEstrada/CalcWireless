@@ -1,0 +1,59 @@
+
+<div class="container">
+    <h2>RSL (Received Signal Level)</h2>
+    <label for="potencia">Potência de Transmissão::</label>
+    <div class="inputSelect">
+    <input type="number" id="potencia" placeholder="Digite a potência" required>
+    <select name="distanciaAntena" id="distanciaAntena" disabled>
+        <option value="1">dBm</option>
+    </select>
+    </div>
+    
+    
+    <label for="ganhoAntena">Ganho da Antena Transmissora (TX):</label>
+    <div class="inputSelect">
+    <input type="number" id="ganhoAntenaTX" placeholder="Digite o valor ganho antenas TX" required>
+    <select name="ValorGanhoTX" id="ValorGanhoTX" disabled>
+        <option value="1">dBi</option>
+    </select>
+    </div>
+
+
+    <label for="perdaCabos">Perdas no Cabo Transmissora (TX):</label>
+    <div class="inputSelect">
+    <input type="number" id="perdaCabosTX" placeholder="Digite o valor de perdas TX" required>
+    <select name="ValorperdaCabosTX" id="ValorperdaCabosTX" disabled>
+        <option value="1">dB</option>
+    </select>
+    </div>
+
+
+    <label for="perdaCabos">Free Space Loss Path:</label>
+    <div class="inputSelect">
+    <input type="number" id="FSLP" placeholder="Digite o valor de FSLP" required>
+    <select name="ValorperdaFSLP" id="ValorperdaFSLP" disabled>
+        <option value="1">dB</option>
+    </select>
+    </div>
+
+
+    <label for="ganhoAntena">Ganho da Antena Receptora (RX):</label>
+    <div class="inputSelect">
+    <input type="number" id="ganhoAntenaRX" placeholder="Digite o valor ganho antenas RX" required>
+    <select name="ValorGanhoRX" id="ValorGanhoRX" disabled>
+        <option value="1">dBi</option>
+    </select>
+    </div>
+
+
+    <label for="perdaCabos">Perdas no Cabo Receptora (RX):</label>
+    <div class="inputSelect">
+    <input type="number" id="perdaCabosRX" placeholder="Digite o valor de perdas RX" required>
+    <select name="ValorperdaCabosRX" id="ValorperdaCabosRX" disabled>
+        <option value="1">dB</option>
+    </select>
+    </div>
+
+    <button onclick="calcularRSL()">Calcular EIRP </button>
+    <p>RSL: <span id="resultado"></span></p>
+</div>

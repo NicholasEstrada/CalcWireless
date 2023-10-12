@@ -1,6 +1,19 @@
 const inputChannel = document.getElementById('inputChannel');
 const frequencia = document.getElementById('frequencia');
 
+function validarNumero(inputChannel) {
+    const valor = inputChannel.value;
+    const mensagemErro = document.getElementById('mensagemErro');
+    
+    if (valor < 1 || valor > 13) {
+        mensagemErro.textContent = 'O número deve estar entre 1 e 13.';
+        inputChannel.setCustomValidity(''); // Limpa qualquer erro personalizado
+    } else {
+        mensagemErro.textContent = '';
+        inputChannel.setCustomValidity(''); // Limpa qualquer erro personalizado
+    }
+}
+
 inputChannel.addEventListener('input', function () {
     const channels = [
         2412, 2417, 2422, 2427, 2432, 2437, 2442, 2447, 2452, 2457, 2462, 2467, 2472

@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0px;
+
 }
 .container {
     max-width: 400px;
@@ -73,4 +75,14 @@ li a:hover {
 
 .formula{
   margin-top: 10px;
+}
+
+.bar{
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+select{
+  width: 80px;
 }

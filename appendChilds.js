@@ -188,3 +188,30 @@ function carregarScriptFslp(){
 
     document.body.appendChild(script)
 }
+
+const formulaRSL = document.getElementById('formulaRSL')
+formulaRSL.addEventListener('click', () => {
+    const conteudo = document.querySelector('.formula')
+    conteudo.innerHTML=''
+    fetch('forms/rsl.html')
+        .then(response => response.text())
+        .then(data => {
+            conteudo.innerHTML = data
+            carregarScriptRSL()
+        })
+        .catch(error => {
+            console.error('Ocorreu um erro ao carregar o arquivo HTML:', error)
+        })
+})
+
+function carregarScriptRSL(){
+    const script = document.createElement('script')
+    script.src = 'calculadora/rsl.js'
+    script.async = true
+
+    script.onload = function () {
+
+    }
+
+    document.body.appendChild(script)
+}
