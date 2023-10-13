@@ -1,0 +1,23 @@
+{
+  "name": "redessf",
+  "version": "1.0.0",
+  "description": "A calculator of wireless connection transmission",
+  "main": "appendChilds.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasEstrada/CalcWireless.git"
+  },
+  "author": "Nicholas Estrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicholasEstrada/CalcWireless/issues"
+  },
+  "homepage": "https://github.com/NicholasEstrada/CalcWireless#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
