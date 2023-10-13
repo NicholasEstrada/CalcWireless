@@ -1,5 +1,26 @@
 # Calculadora de serviços Wireless
 
+<h4 align="center"> 
+    Para executar o programa na sua maquina execute os seguintes passos 
+</h4>
+
+- Na pasta desejada crie um clone do repositorio:
+  ```
+  git clone https://github.com/NicholasEstrada/CalcWireless.git
+  ```
+- Dentro do projeto você ira instalar as dependências necessárias
+  ```
+  cd CalcWireless
+  npm install
+  ```
+- Após instalar os pacotes necessários inicie a aplicação
+  ```
+  npm start
+  ```
+- Abra no navegador o link da aplicação
+
+Foi aplicado as seguintes formulas no trabalho desenvolvido
+
 Shannon - Capacidade Máxima de Canal:
 
 Calcular a capacidade máxima de transmissão de dados em um canal de comunicação.
