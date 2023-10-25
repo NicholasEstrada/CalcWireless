@@ -33,12 +33,19 @@ function calcularClearance() {
     let distancia = parseFloat(document.getElementById('distancia').value)/1000;
     distancia = distancia*grandezaDitancia;
 
-    const grandezaFrequencia = parseInt(document.getElementById('grandezaHz').value);
+    const grandezaHz = document.getElementById('grandezaHz').value;
     let frequencia = parseFloat(document.getElementById('frequencia').value);
-    frequencia = frequencia*grandezaFrequencia;
+    
+    if (grandezaHz == 'Hz'){
+        frequencia = frequencia/1000000;
+    } else if (grandezaHz == 'KHz'){
+        frequencia = frequencia/1000;
+    } else if (grandezaHz == 'GHz'){
+        frequencia = frequencia*1000
+    }
 
     const grandezaObjeto = parseInt(document.getElementById('distanciaObj').value);
-    let objeto = parseFloat(document.getElementById('objeto').value)/1000;
+    let objeto = parseFloat(document.getElementById('objeto').value);
     objeto = objeto*grandezaObjeto;
 
     if (!isNaN(distancia) && !isNaN(frequencia) && !isNaN(objeto)) {

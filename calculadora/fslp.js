@@ -3,13 +3,13 @@ function calcularFSLP(){
     const grandezaHz = document.getElementById('grandezaHz').value
 
     if (grandezaHz == 'Hz'){
-        larguraDeBanda = larguraDeBanda*1000000;
+        larguraDeBanda = larguraDeBanda/1000000;
     } else if (grandezaHz == 'KHz'){
-        larguraDeBanda = larguraDeBanda*1000;
+        larguraDeBanda = larguraDeBanda/1000;
     } else if (grandezaHz == 'MHz'){
         larguraDeBanda = larguraDeBanda
     } else if (grandezaHz == 'GHz'){
-        larguraDeBanda = larguraDeBanda/1000
+        larguraDeBanda = larguraDeBanda*1000
     } 
 
     let distancia = parseFloat(document.getElementById('distancia').value)
